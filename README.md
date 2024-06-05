@@ -5,7 +5,7 @@ Este proyecto implementa un programa interactivo en C++ para trabajar con grafos
 El código está estructurado en un bucle do-while que continuará ejecutándose hasta que el usuario seleccione la opción de salida.
 
 # Funcionalidades Principales
- # 1. Agregar Vértices
+ ## 1. Agregar Vértices
 
 Solicita al usuario ingresar el número de vértices y los valores para cada vértice.
 Inserta los vértices en la estructura del grafo.
