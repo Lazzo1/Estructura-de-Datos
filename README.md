@@ -76,14 +76,13 @@ case 1: {
 3. **Mostrar Grafo**
    - Muestra en la consola la representación actual del grafo.
 
-      ```cpp
+      ```
 case 3: {
     cout << "\nGrafo:\n";
     mostrarGrafo();
     // Lógica para mostrar el grafo en la consola
     break;
-}
-        ```
+}```
 
 4. **Trabajar con Matrices**
    - Permite al usuario ingresar y visualizar matrices relacionadas con el grafo.
