@@ -24,6 +24,7 @@ do {
 } while (opcion != 9);
 
 
+
 ## Funcionalidades Principales
 
 1. **Agregar Vértices**
