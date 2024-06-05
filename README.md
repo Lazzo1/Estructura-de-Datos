@@ -4,7 +4,25 @@ Este proyecto implementa un programa interactivo en C++ para trabajar con grafos
 
 ## Estructura del Código
 
-El código está estructurado en un bucle `do-while` que continuará ejecutándose hasta que el usuario seleccione la opción de salida.
+El código está estructurado en un bucle do-while que continuará ejecutándose hasta que el usuario seleccione la opción de salida. Cada opción del menú se implementa como un caso dentro de una declaración switch, lo que facilita la navegación y la ejecución de las diferentes funcionalidades.
+
+do {
+    // Lógica para mostrar el menú y obtener la opción del usuario
+
+    switch (opcion) {
+        case 1:
+            // Lógica para agregar vértices
+            break;
+        case 2:
+            // Lógica para agregar aristas
+            break;
+        case 3:
+            // Lógica para mostrar el grafo
+            break;
+        // Otros casos para las diferentes funcionalidades
+    }
+} while (opcion != 9);
+
 
 ## Funcionalidades Principales
 
