@@ -23,7 +23,7 @@ do {
     }
 } while (opcion != 9);
 
-
+```
 
 ## Funcionalidades Principales
 
@@ -31,6 +31,24 @@ do {
    - Solicita al usuario ingresar el número de vértices y los valores para cada vértice.
    - Inserta los vértices en la estructura del grafo.
    - Guarda la representación del grafo en el archivo "vertice.txt".
+
+  ```cpp
+case 1: {
+    ofstream vertice;
+    vertice.open("vertice.txt", ios::out | ios::app);
+    int n, dat[100];
+    cout << "Ingrese el numero de vertices: ";
+    cin >> n;
+    for (int i = 0; i < n; ++i) {
+        cout << "Ingrese el valor de cada vertice " << i + 1 << ": ";
+        cin >> dat[i];
+        insertarVertice(dat[i]);
+    }
+    // Lógica para escribir la representación del grafo en el archivo "vertice.txt"
+    break;
+}
+
+```
 
 2. **Agregar Aristas**
    - Solicita al usuario ingresar el número de aristas y los nodos de origen y destino para cada una.
