@@ -25,7 +25,7 @@ do {
 
 ```
 
-https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.hci.uniovi.es%2FProducts%2FDSTool%2Favl%2Favl-queSon.html&psig=AOvVaw3IQh0nkLV71f09Qgj-aFHW&ust=1717811238128000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJiQmNevyIYDFQAAAAAdAAAAABAE
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159101107/0a3a06da-ead1-4fcc-9804-f8106c08eb4a)
 
 
 ## Funcionalidades Principales
