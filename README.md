@@ -61,7 +61,7 @@ case 1: {
    - Guarda la representación del grafo en el archivo "grafo.txt".
       ```
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/31dfbed8-c684-438b-bc3c-99941f4ad200)
-![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/d4be709f-7c3d-40ab-b64f-43e2f918136b)
+
 
 
 
@@ -86,7 +86,10 @@ case 1: {
 3. **Mostrar Grafo**
    - Muestra en la consola la representación actual del grafo.
 
- ```cpp
+ ```
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/d4be709f-7c3d-40ab-b64f-43e2f918136b)
+
+
 case 3: {
     cout << "\nGrafo:\n";
     mostrarGrafo();
