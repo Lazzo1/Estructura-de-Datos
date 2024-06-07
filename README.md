@@ -138,13 +138,7 @@ case 9:
     break;
 ```
 
-# Proyecto de Implementación de Árboles en C++
-
-Este proyecto contiene la implementación de diferentes tipos de árboles en C++, incluyendo Árbol Binario, Árbol AVL y Árbol Rojo-Negro. A continuación, se detallan las estructuras y funciones incluidas en el proyecto, así como las instrucciones para la compilación y ejecución del código.
-
-## Estructuras de Datos
-
-### Árbol Binario
+# Árbol Binario
 
 #### `TreeNode`
 
@@ -159,7 +153,7 @@ struct TreeNode {
 };
 ```
 
-# Árbol AVL
+## Árbol AVL
 `AVLTreeNode`
 Estructura para un nodo de Árbol AVL, que hereda de TreeNode y añade la información de altura.
 
@@ -168,6 +162,123 @@ struct AVLTreeNode : public TreeNode {
     int height;
     AVLTreeNode(int k) : TreeNode(k), height(1) {}
 };
+```
+
+## Árbol Rojo-Negro
+`RBTreeNode`
+Estructura para un nodo de Árbol Rojo-Negro, que hereda de TreeNode y añade la información de color y puntero al nodo padre.
+
+```cpp
+enum Color { RED, BLACK };
+
+struct RBTreeNode : public TreeNode {
+    Color color;
+    RBTreeNode* parent;
+    RBTreeNode(int k) : TreeNode(k), color(RED), parent(NULL) {}
+};
+```
+## Funciones Implementadas
+**Árbol Binario**
+Inserción
+Inserta un nuevo nodo en el Árbol Binario.
+
+```cpp
+TreeNode* insert(TreeNode* root, int key) {
+    if (root == NULL) {
+        return new TreeNode(key);
+    }
+    if (key < root->key) {
+        root->left = insert(root->left, key);
+    } else if (key > root->key) {
+        root->right = insert(root->right, key);
+    }
+    return root;
+}
+```
+
+## Árbol AVL
+**Altura**
+Calcula la altura de un nodo.
+
+```cpp
+int height(TreeNode* node) {
+    if (node == NULL) return 0;
+    return max(height(node->left), height(node->right)) + 1;
+}
+```
+
+**Balance**
+Obtiene el factor de balance de un nodo.
+
+```cpp
+int getBalance(TreeNode* node) {
+    if (node == NULL) return 0;
+    return height(node->left) - height(node->right);
+}
+```
+
+**Rotaciones**
+Rotación derecha para balancear el árbol.
+
+```cpp
+TreeNode* rightRotate(TreeNode* y) {
+    TreeNode* x = y->left;
+    TreeNode* T2 = x->right;
+    x->right = y;
+    y->left = T2;
+    static_cast<AVLTreeNode*>(y)->height = max(height(y->left), height(y->right)) + 1;
+    static_cast<AVLTreeNode*>(x)->height = max(height(x->left), height(x->right)) + 1;
+    return x;
+}
+```
+
+Rotación izquierda para balancear el árbol.
+
+```cpp
+TreeNode* leftRotate(TreeNode* x) {
+    TreeNode* y = x->right;
+    TreeNode* T2 = y->left;
+    y->left = x;
+    x->right = T2;
+    static_cast<AVLTreeNode*>(x)->height = max(height(x->left), height(x->right)) + 1;
+    static_cast<AVLTreeNode*>(y)->height = max(height(y->left), height(y->right)) + 1;
+    return y;
+}
+```
+**Inserción en AVL**
+Inserta un nuevo nodo en el Árbol AVL y lo balancea.
+
+```cpp
+TreeNode* insertAVL(TreeNode* node, int key) {
+    if (node == NULL) return new AVLTreeNode(key);
+    if (key < node->key) {
+        node->left = insertAVL(node->left, key);
+    } else if (key > node->key) {
+        node->right = insertAVL(node->right, key);
+    } else {
+        return node;
+    }
+
+    static_cast<AVLTreeNode*>(node)->height = max(height(node->left), height(node->right)) + 1;
+    int balance = getBalance(node);
+
+    if (balance > 1 && key < node->left->key) {
+        return rightRotate(node);
+    }
+    if (balance < -1 && key > node->right->key) {
+        return leftRotate(node);
+    }
+    if (balance > 1 && key > node->left->key) {
+        node->left = leftRotate(node->left);
+        return rightRotate(node);
+    }
+    if (balance < -1 && key < node->right->key) {
+        node->right = rightRotate(node->right);
+        return leftRotate(node);
+    }
+
+    return node;
+}
 ```
 
 ## Consideraciones
