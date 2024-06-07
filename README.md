@@ -25,7 +25,11 @@ do {
 
 ```
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/514e546c-0f42-4ab6-b8b2-1a03264ff474)
+
+
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/80737308-07ee-40ab-b332-24391e6a3952)
+
+
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/c2b807d4-5765-4480-868b-eb7977a6e959)
 
 
