@@ -25,7 +25,6 @@ do {
 
 ```
 
-![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159101107/0a3a06da-ead1-4fcc-9804-f8106c08eb4a)
 
 
 ## Funcionalidades Principales
