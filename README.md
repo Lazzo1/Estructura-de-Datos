@@ -138,6 +138,38 @@ case 9:
     break;
 ```
 
+# Proyecto de Implementación de Árboles en C++
+
+Este proyecto contiene la implementación de diferentes tipos de árboles en C++, incluyendo Árbol Binario, Árbol AVL y Árbol Rojo-Negro. A continuación, se detallan las estructuras y funciones incluidas en el proyecto, así como las instrucciones para la compilación y ejecución del código.
+
+## Estructuras de Datos
+
+### Árbol Binario
+
+#### `TreeNode`
+
+Estructura básica para un nodo de Árbol Binario.
+
+```cpp
+struct TreeNode {
+    int key;
+    TreeNode* left;
+    TreeNode* right;
+    TreeNode(int k) : key(k), left(NULL), right(NULL) {}
+};
+```
+
+# Árbol AVL
+`AVLTreeNode`
+Estructura para un nodo de Árbol AVL, que hereda de TreeNode y añade la información de altura.
+
+```cpp
+struct AVLTreeNode : public TreeNode {
+    int height;
+    AVLTreeNode(int k) : TreeNode(k), height(1) {}
+};
+```
+
 ## Consideraciones
 
 - El código hace uso de archivos de texto para guardar la representación del grafo y las matrices asociadas.
