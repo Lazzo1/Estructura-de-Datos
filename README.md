@@ -83,14 +83,14 @@ case 1: {
 3. **Mostrar Grafo**
    - Muestra en la consola la representación actual del grafo.
 
-
+```
 case 3: {
     cout << "\nGrafo:\n";
     mostrarGrafo();
     // Lógica para mostrar el grafo en la consola
     break;
 }
-
+```
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/d4be709f-7c3d-40ab-b64f-43e2f918136b)
 
 4. **Trabajar con Matrices**
