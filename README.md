@@ -116,12 +116,18 @@ case 3: {
 
  ```cpp
 case 7:
-    // Lógica para ejecutar algoritmos sobre grafos
+    // Lógica para ejecutar algoritmos Dijkstra y Flod-warshall
     break;
+```
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/d060a3f8-1ec7-4fdb-bd43-3cb564f3beb4)
+
+```cpp
 case 8:
     // Lógica para ejecutar algoritmos sobre grafos
     break;
 ```
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/7cddc9b3-8d76-4172-9104-1b2b9307c36e)
+
 
 6. **Salir del Programa**
    - Permite al usuario salir del programa.
