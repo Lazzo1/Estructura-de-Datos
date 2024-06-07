@@ -59,8 +59,15 @@ case 1: {
    - Verifica la existencia de los nodos de origen y destino en el grafo.
    - Inserta las aristas en la estructura del grafo.
    - Guarda la representación del grafo en el archivo "grafo.txt".
-     
-  ```cpp
+      ```
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/31dfbed8-c684-438b-bc3c-99941f4ad200)
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/d4be709f-7c3d-40ab-b64f-43e2f918136b)
+
+
+
+
+
+
     case 2: {
     int dato_origen, dato_destino, peso;
     int n;
