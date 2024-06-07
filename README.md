@@ -281,6 +281,29 @@ TreeNode* insertAVL(TreeNode* node, int key) {
 }
 ```
 
+## Ejemplos de Uso
+En el `main()` se incluyen ejemplos de cómo usar las funciones de inserción en Árbol Binario y AVL.
+
+```cpp
+int main() {
+    // Ejemplo de uso de las funciones
+    TreeNode* root = NULL;
+    root = insert(root, 10);
+    root = insert(root, 20);
+    root = insert(root, 5);
+    
+    // AVL
+    TreeNode* avlRoot = NULL;
+    avlRoot = insertAVL(avlRoot, 10);
+    avlRoot = insertAVL(avlRoot, 20);
+    avlRoot = insertAVL(avlRoot, 5);
+
+    // Aquí se pueden añadir más pruebas y usos de las funciones
+
+    return 0;
+}
+```
+
 ## Consideraciones
 
 - El código hace uso de archivos de texto para guardar la representación del grafo y las matrices asociadas.
