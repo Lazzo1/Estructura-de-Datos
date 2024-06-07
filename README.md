@@ -45,12 +45,13 @@ case 1: {
         cout << "Ingrese el valor de cada vertice " << i + 1 << ": ";
         cin >> dat[i];
         insertarVertice(dat[i]);
+        vertice << dat[i] << "\n"; // Guardar el vértice en el archivo
     }
-    // Lógica para escribir la representación del grafo en el archivo "vertice.txt"
+    vertice.close();
     break;
 }
-
 ```
+
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/9465d69d-9225-48d8-98b5-daf49c896a33)
 
 2. **Agregar Aristas**
@@ -60,7 +61,7 @@ case 1: {
    - Inserta las aristas en la estructura del grafo.
    - Guarda la representación del grafo en el archivo "grafo.txt".
 
-
+ ```cpp
     case 2: {
     int dato_origen, dato_destino, peso;
     int n;
@@ -69,12 +70,20 @@ case 1: {
     ofstream arista;
     arista.open("grafo.txt", ios::out | ios::app);
     for (int i = 0; i < n; i++) {
-        // Lógica para ingresar los nodos de origen y destino, y el peso de la arista
+        cout << "Ingrese el nodo de origen: ";
+        cin >> dato_origen;
+        cout << "Ingrese el nodo de destino: ";
+        cin >> dato_destino;
+        cout << "Ingrese el peso de la arista (opcional, ingrese 0 si no tiene peso): ";
+        cin >> peso;
+        insertarArista(dato_origen, dato_destino, peso);
+        arista << dato_origen << " " << dato_destino << " " << peso << "\n"; // Guardar la arista en el archivo
     }
-    // Lógica para escribir la representación del grafo en el archivo "grafo.txt"
+    arista.close();
     break;
 }
 
+ ```
 
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/31dfbed8-c684-438b-bc3c-99941f4ad200)
 
@@ -99,9 +108,28 @@ case 3: {
    - Carga matrices desde un archivo y las visualiza.
 
  ```cpp
-     case 4:
+case 4: {
     // Lógica para trabajar con matrices
+    vector<vector<int>> matriz;
+    int n;
+    cout << "Ingrese el tamaño de la matriz: ";
+    cin >> n;
+    matriz.resize(n, vector<int>(n));
+    cout << "Ingrese los elementos de la matriz:\n";
+    for (int i = 0; i < n; ++i) {
+        for (int j = 0; j < n; ++j) {
+            cin >> matriz[i][j];
+        }
+    }
+    cout << "Matriz ingresada:\n";
+    for (const auto& fila : matriz) {
+        for (int elem : fila) {
+            cout << elem << " ";
+        }
+        cout << "\n";
+    }
     break;
+}
 ```
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/cee2345e-2ddf-4696-bd4a-a56af2d34e68)
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/3293f52c-cedf-44f9-af8a-35d2470dbd2e)
@@ -111,20 +139,51 @@ case 3: {
 
 
 5. **Algoritmos sobre Grafos**
-   - Permite al usuario seleccionar entre los algoritmos de Dijkstra y Floyd-Warshall para encontrar el camino más corto en el grafo.
-   - Permite al usuario seleccionar entre los algoritmos de Kruskal y Prim para encontrar el árbol de expansión mínima en el grafo.
+   - Permite al usuario seleccionar entre los algoritmos de Dijkstra y Floyd-Warshall para encontrar el camino más corto en el grafo. Permite al usuario seleccionar entre los algoritmos de Kruskal y Prim para encontrar el árbol de expansión mínima en el grafo.
+
+   - Camino más corto: Dijkstra y Floyd-Warshall
 
  ```cpp
-case 7:
-    // Lógica para ejecutar algoritmos Dijkstra y Flod-warshall
+case 7: {
+    cout << "Seleccione el algoritmo:\n";
+    cout << "1. Dijkstra\n";
+    cout << "2. Floyd-Warshall\n";
+    int alg;
+    cin >> alg;
+    if (alg == 1) {
+        // Lógica para ejecutar algoritmo de Dijkstra
+        dijkstra();
+    } else if (alg == 2) {
+        // Lógica para ejecutar algoritmo de Floyd-Warshall
+        floydWarshall();
+    } else {
+        cout << "Opción no válida\n";
+    }
     break;
+}
 ```
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/d060a3f8-1ec7-4fdb-bd43-3cb564f3beb4)
 
+Árbol de Expansión Mínima: Kruskal y Prim
+
 ```cpp
-case 8:
-    // Lógica para ejecutar algoritmos kruskall y prim 
+case 8: {
+    cout << "Seleccione el algoritmo:\n";
+    cout << "1. Kruskal\n";
+    cout << "2. Prim\n";
+    int alg;
+    cin >> alg;
+    if (alg == 1) {
+        // Lógica para ejecutar algoritmo de Kruskal
+        kruskal();
+    } else if (alg == 2) {
+        // Lógica para ejecutar algoritmo de Prim
+        prim();
+    } else {
+        cout << "Opción no válida\n";
+    }
     break;
+}
 ```
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/7cddc9b3-8d76-4172-9104-1b2b9307c36e)
 
@@ -133,9 +192,10 @@ case 8:
    - Permite al usuario salir del programa.
 
 ```cpp
-case 9:
-    // Lógica para salir del programa
+case 9: {
+    cout << "Saliendo del programa...\n";
     break;
+}
 ```
 
 # Árbol Binario
