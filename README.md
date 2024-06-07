@@ -50,10 +50,8 @@ case 1: {
     break;
 }
 
-![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/9465d69d-9225-48d8-98b5-daf49c896a33)
-
-
 ```
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/9465d69d-9225-48d8-98b5-daf49c896a33)
 
 2. **Agregar Aristas**
    - Solicita al usuario ingresar el número de aristas y los nodos de origen y destino para cada una.
