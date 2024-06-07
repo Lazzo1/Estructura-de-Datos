@@ -11,19 +11,22 @@ do {
     // Lógica para mostrar el menú y obtener la opción del usuario
     switch (opcion) {
         case 1:
-            // Lógica para agregar vértices
+            // Lógica para agregar arboles
             break;
         case 2:
-            // Lógica para agregar aristas
+            // Lógica para agregar grafos
             break;
         case 3:
-            // Lógica para mostrar el grafo
+            // Salida del programa 
             break;
         // Otros casos para las diferentes funcionalidades
     }
-} while (opcion != 9);
+} while (opcion != 3);
 
 ```
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/514e546c-0f42-4ab6-b8b2-1a03264ff474)
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/80737308-07ee-40ab-b332-24391e6a3952)
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/c2b807d4-5765-4480-868b-eb7977a6e959)
 
 
 
