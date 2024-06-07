@@ -59,8 +59,6 @@ case 1: {
    - Verifica la existencia de los nodos de origen y destino en el grafo.
    - Inserta las aristas en la estructura del grafo.
    - Guarda la representación del grafo en el archivo "grafo.txt".
-      ```
-![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/31dfbed8-c684-438b-bc3c-99941f4ad200)
 
 
     case 2: {
@@ -76,13 +74,14 @@ case 1: {
     // Lógica para escribir la representación del grafo en el archivo "grafo.txt"
     break;
 }
-```
+
+
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/31dfbed8-c684-438b-bc3c-99941f4ad200)
+
+
 
 3. **Mostrar Grafo**
    - Muestra en la consola la representación actual del grafo.
-
- ```cpp
-
 
 
 case 3: {
@@ -91,7 +90,7 @@ case 3: {
     // Lógica para mostrar el grafo en la consola
     break;
 }
-```
+
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/d4be709f-7c3d-40ab-b64f-43e2f918136b)
 
 4. **Trabajar con Matrices**
