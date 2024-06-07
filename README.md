@@ -123,7 +123,7 @@ case 7:
 
 ```cpp
 case 8:
-    // Lógica para ejecutar algoritmos sobre grafos
+    // Lógica para ejecutar algoritmos kruskall y prim 
     break;
 ```
 ![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/7cddc9b3-8d76-4172-9104-1b2b9307c36e)
