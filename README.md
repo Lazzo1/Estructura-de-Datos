@@ -103,6 +103,12 @@ case 3: {
     // Lógica para trabajar con matrices
     break;
 ```
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/cee2345e-2ddf-4696-bd4a-a56af2d34e68)
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/3293f52c-cedf-44f9-af8a-35d2470dbd2e)
+![image](https://github.com/Lazzo1/Estructura-de-Datos/assets/159094513/e4c1a3e0-15eb-422b-b1a4-93e00309c671)
+
+
+
 
 5. **Algoritmos sobre Grafos**
    - Permite al usuario seleccionar entre los algoritmos de Dijkstra y Floyd-Warshall para encontrar el camino más corto en el grafo.
