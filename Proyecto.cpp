@@ -32,7 +32,7 @@ struct RBTreeNode : public TreeNode {
     RBTreeNode(int k) : TreeNode(k), color(RED), parent(NULL) {}
 };
 
-// InserciÛn en ¡rbol Binario
+// Inserci√≥n en √Årbol Binario
 TreeNode* insert(TreeNode* root, int key) {
     if (root == NULL) {
         return new TreeNode(key);
@@ -98,7 +98,7 @@ TreeNode* insertAVL(TreeNode* node, int key) {
     return node;
 }
 
-// Funciones para ¡rbol Rojo-Negro
+// Funciones para √Årbol Rojo-Negro
 void rotateLeft(RBTreeNode*& root, RBTreeNode*& pt) {
     RBTreeNode* pt_right = static_cast<RBTreeNode*>(pt->right);
     pt->right = pt_right->left;
@@ -193,7 +193,7 @@ void insertRBTree(RBTreeNode*& root, RBTreeNode*& pt) {
     }
 }
 
-// DeclaraciÛn de la funciÛn generateDOTHelper
+// Declaraci√≥n de la funci√≥n generateDOTHelper
 void generateDOTHelper(TreeNode* node, ofstream& outFile) {
     if (node != NULL) {
         if (node->left != NULL) {
@@ -207,17 +207,18 @@ void generateDOTHelper(TreeNode* node, ofstream& outFile) {
     }
 }
 
-// DefiniciÛn de la funciÛn generateDOT
+// Definici√≥n de la funci√≥n generateDOT
 void generateDOT(TreeNode* root, ofstream& outFile) {
     outFile << "digraph finite_state_machine{\n";
-    outFile << "rankdir=LR{\n";
+    outFile << "rankdir=LL{\n";
     outFile << "node [shape = circle]{\n";
     generateDOTHelper(root, outFile);
     outFile << "}\n";
+	outFile<<"Copiar y pegar el codigo en http://www.webgraphviz.com"<<endl;	
 }
 
 
-// FunciÛn para imprimir el ·rbol en formato nivel por nivel
+// Funci√≥n para imprimir el √°rbol en formato nivel por nivel
 void printLevelOrder(TreeNode* root) {
     if (root == NULL){ 
 	return;
@@ -262,12 +263,12 @@ bool isAVL(TreeNode* root) {
 }
 
 void printTreeInfo(TreeNode* root) {
-    cout << "¡rbol Binario Inicial (nivel por nivel):\n";
+    cout << "√Årbol Binario Inicial (nivel por nivel):\n";
     printLevelOrder(root);
     if (isAVL(root)) {
-        cout << "El ·rbol es AVL.\n";
+        cout << "El √°rbol es AVL.\n";
     } else {
-        cout << "El ·rbol no es AVL.\n";
+        cout << "El √°rbol no es AVL.\n";
     }
 }
 
@@ -395,7 +396,7 @@ void mostrarMatrices(const vector<vector<vector<int>>>& listaDeMatrices) {
     }
 }
 
-// FunciÛn para ingresar matrices
+// Funci√≥n para ingresar matrices
 void ingresarMatrices(vector<vector<vector<int>>>& listaDeMatrices) {
     int numMatrices;
     cout << "Ingrese el numero de matrices: ";
@@ -421,7 +422,7 @@ void ingresarMatrices(vector<vector<vector<int>>>& listaDeMatrices) {
     }
 }
 
-// FunciÛn para dibujar el grafo
+// Funci√≥n para dibujar el grafo
 void dibujarGrafo(const vector<vector<vector<int>>>& listaDeMatrices) {
     ofstream matriz;
     matriz.open("matriz.txt", ios::out | ios::app);
@@ -482,7 +483,7 @@ void cargarMatricesDesdeArchivo(vector<vector<vector<int>>>& listaDeMatrices, co
     archivo.close();
 }
 
-// FunciÛn para dibujar el grafo
+// Funci√≥n para dibujar el grafo
 void dibujarGrafo1(const vector<vector<vector<int>>>& listaDeMatrices, const string& nombreArchivoSalida) {
     ofstream matriz;
     matriz.open(nombreArchivoSalida, ios::out | ios::app);
@@ -511,7 +512,7 @@ void dibujarGrafo1(const vector<vector<vector<int>>>& listaDeMatrices, const str
     }
 }
 
-// Algoritmo de Dijkstra para encontrar el camino m·s corto
+// Algoritmo de Dijkstra para encontrar el camino m√°s corto
 vector<int> dijkstra(int origen, int numvertices) {
     vector<int> distancia(numvertices, numeric_limits<int>::max());
     vector<bool> visitado(numvertices, false);
@@ -548,7 +549,7 @@ vector<int> dijkstra(int origen, int numvertices) {
     return distancia;
 }
 
-// FunciÛn para ejecutar el algoritmo de Dijkstra y mostrar el resultado
+// Funci√≥n para ejecutar el algoritmo de Dijkstra y mostrar el resultado
 void ejecutarDijkstra(int origen) {
 	int numVertices = 0;
 	registro vertice = cab_ver;
@@ -569,7 +570,7 @@ void ejecutarDijkstra(int origen) {
         cout << "Cantidad de distancias calculadas:" << numDistancias << endl;
     }
   
-// Algoritmo de Floyd-Warshall para encontrar el camino m·s corto entre todos los pares de vÈrtices
+// Algoritmo de Floyd-Warshall para encontrar el camino m√°s corto entre todos los pares de v√©rtices
 vector<vector<int>> floydWarshall(int numVertices) {
     vector<vector<int>> distancias(numVertices, vector<int>(numVertices, numeric_limits<int>::max()));
 
@@ -603,7 +604,7 @@ vector<vector<int>> floydWarshall(int numVertices) {
     return distancias;
 }
 
-// FunciÛn para ejecutar el algoritmo de Floyd-Warshall y mostrar el resultado
+// Funci√≥n para ejecutar el algoritmo de Floyd-Warshall y mostrar el resultado
 void ejecutarFloydWarshall() {
 	int numVertices = 0;
 	 registro vertice = cab_ver;
@@ -625,7 +626,7 @@ void ejecutarFloydWarshall() {
     }
 }
 
-// FunciÛn de ayuda para Kruskal
+// Funci√≥n de ayuda para Kruskal
 int find(vector<int>& parent, int i) {
     if (parent[i] == i)
         return i;
@@ -646,7 +647,7 @@ void unionSet(vector<int>& parent, vector<int>& rank, int x, int y) {
     }
 }
 
-// Algoritmo de Kruskal para encontrar el ·rbol de expansiÛn mÌnima
+// Algoritmo de Kruskal para encontrar el √°rbol de expansi√≥n m√≠nima
 vector<Arista>obtenerAristas() {
     vector<Arista> aristas;
     registro vertice = cab_ver;
@@ -695,7 +696,7 @@ vector<Arista>obtenerAristas() {
 }
 
     
-// FunciÛn para ejecutar el algoritmo de Kruskal y mostrar el resultado
+// Funci√≥n para ejecutar el algoritmo de Kruskal y mostrar el resultado
 void ejecutarKruskal() {
 	int numVertices = 0;
 	 registro vertice = cab_ver;
@@ -711,7 +712,7 @@ void ejecutarKruskal() {
     }
 }
 
-// Algoritmo de Prim para encontrar el ·rbol de expansiÛn mÌnima
+// Algoritmo de Prim para encontrar el √°rbol de expansi√≥n m√≠nima
 vector<pair<pair<int,int>,int>> prim(int numVertices) {
     vector<pair<pair<int,int>,int>> MST;
     vector<int> clave(numVertices, numeric_limits<int>::max());
@@ -757,7 +758,7 @@ vector<pair<pair<int,int>,int>> prim(int numVertices) {
     return MST;
 }
 
-// FunciÛn para ejecutar el algoritmo de Prim y mostrar el resultado
+// Funci√≥n para ejecutar el algoritmo de Prim y mostrar el resultado
 void ejecutarPrim() {
 	int numVertices = 0;
 	registro vertice = cab_ver;
@@ -804,7 +805,7 @@ void menuPrincipal() {
                 cout << "Saliendo...\n";
                 break;
             default:
-                cout << "OpciÛn no v·lida. IntÈntelo de nuevo.\n";
+                cout << "Opci√≥n no v√°lida. Int√©ntelo de nuevo.\n";
                 break;
         }
     } while (op != 3);
@@ -819,7 +820,7 @@ void menuArboles() {
         cout << "2. Mostrar arbol inicial\n";
         cout << "3. Convertir en AVL y mostrar\n";
         cout << "4. Convertir en arbol Rojo-Negro y mostrar\n";
-        cout << "5. Volver al Men˙ Principal\n";
+        cout << "5. Volver al Men√∫ Principal\n";
         cout << "Ingrese su eleccion: ";
         cin >> choice;
         system("cls");
@@ -881,10 +882,10 @@ void menuArboles() {
                 break;
             }
             case 5:
-                // Volver al Men˙ Principal
+                // Volver al Men√∫ Principal
                 break;
             default:
-                cout << "OpciÛn no v·lida. IntÈntelo de nuevo.\n";
+                cout << "Opci√≥n no v√°lida. Int√©ntelo de nuevo.\n";
                 break;
         }
     } while (choice != 5);
@@ -894,7 +895,7 @@ void menuArboles() {
 void menuGrafos() {
     // Asumiendo que cab_ver, insertarVertice, recorrer_vertice, insertarArista,
     // mostrarGrafo, ingresarMatrices, dibujarGrafo, cargarMatricesDesdeArchivo,
-    // ejecutarDijkstra, ejecutarFloydWarshall, ejecutarKruskal, ejecutarPrim est·n definidos.
+    // ejecutarDijkstra, ejecutarFloydWarshall, ejecutarKruskal, ejecutarPrim est√°n definidos.
     vector<vector<vector<int>>> listaDeMatrices;
     int opcion;
     do {
@@ -907,7 +908,7 @@ void menuGrafos() {
         cout << "6- Cargar matrices desde archivo" << endl;
         cout << "7- Encontrar camino mas corto" << endl;
         cout << "8- Encontrar peso minimo" << endl;
-        cout << "9- Volver al Men˙ Principal" << endl;
+        cout << "9- Volver al Men√∫ Principal" << endl;
         cout << "\nOpcion:";
         cin >> opcion;
         system("cls");
@@ -941,7 +942,7 @@ void menuGrafos() {
             case 2: {
                 int dato_origen, dato_destino, peso;
                 int n;
-                cout << "Ingrese el n˙mero de aristas: ";
+                cout << "Ingrese el n√∫mero de aristas: ";
                 cin >> n;
                 ofstream arista;
                 arista.open("grafo.txt", ios::out | ios::app);
@@ -1006,7 +1007,7 @@ void menuGrafos() {
                 switch (opcionAlgoritmo) {
                     case 1: {
                         int origen;
-                        cout << "Ingrese el vÈrtice de origen: ";
+                        cout << "Ingrese el v√©rtice de origen: ";
                         cin >> origen;
                         ejecutarDijkstra(origen);
                         break;
@@ -1021,7 +1022,7 @@ void menuGrafos() {
             }
             case 8: {
                 int opcionAlgoritmo;
-                cout << "\nSeleccione el algoritmo para encontrar el ·rbol de expansiÛn mÌnima:\n";
+                cout << "\nSeleccione el algoritmo para encontrar el √°rbol de expansi√≥n m√≠nima:\n";
                 cout << "1- Kruskal\n";
                 cout << "2- Prim\n";
                 cout << "Opcion: ";
@@ -1039,10 +1040,10 @@ void menuGrafos() {
                 break;
             }
             case 9:
-                // Volver al Men˙ Principal
+                // Volver al Men√∫ Principal
                 break;
             default:
-                cout << "OpciÛn no v·lida. IntÈntelo de nuevo.\n";
+                cout << "Opci√≥n no v√°lida. Int√©ntelo de nuevo.\n";
                 break;
         }
     } while (opcion != 9);
